@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.springCloud.k8s</groupId>
+    <artifactId>springCloud-k8s-consumer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>springCloud-k8s-consumer-api</artifactId>
+  <name>springCloud-k8s-consumer-api</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <workspace.root>${project.basedir}/../../</workspace.root>
+  </properties>
+  <dependencies>
+  	<!-- project begin -->
+  	<dependency>
+  		<groupId>com.springCloud.k8s</groupId>
+    	<artifactId>springCloud-k8s-consumer-model</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.springCloud.k8s</groupId>
+    	<artifactId>springCloud-k8s-common-configuration</artifactId>
+  	</dependency>
+  	<!-- project end -->
+  	<!-- <dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-openfeign-core</artifactId>
+	</dependency> -->
+	<dependency>
+		<groupId>com.playtika.reactivefeign</groupId>
+		<artifactId>feign-reactor-spring-configuration</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>io.github.resilience4j</groupId>
+		<artifactId>resilience4j-annotations</artifactId>
+	</dependency>
+  </dependencies>
+</project>
