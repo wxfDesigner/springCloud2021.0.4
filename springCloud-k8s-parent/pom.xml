@@ -155,6 +155,7 @@
 		<module>springCloud-k8s-consumer</module>
 		<module>springCloud-k8s-provider</module>
     <module>springCloud-k8s-base</module>
+    <module>springCloud-k8s-gateway</module>
   </modules>
 	<dependencyManagement>
 		<dependencies>

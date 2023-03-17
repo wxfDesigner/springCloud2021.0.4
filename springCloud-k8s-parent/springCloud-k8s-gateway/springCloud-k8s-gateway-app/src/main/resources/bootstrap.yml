@@ -1,5 +1,5 @@
 server:
-  port: 6660
+  port: 80
    
 spring:   
   profiles:
@@ -9,8 +9,55 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: springCloud-k8s-provider-app
+    name: springCloud-k8s-gateway-app
   cloud:
+# gateway
+    gateway:
+#      globalcors:
+#        add-to-simple-url-handler-mapping: true
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins:
+#              - "http://localhost:8081" # 此处为需跨域的地址
+#            allowedHeaders:
+#              - "*"
+#            allowCredentials: true
+#            maxAge: 360000
+#            allowedMethods:
+#              - GET
+#              - POST
+#              - DELETE
+#              - PUT
+#              - OPTIONS
+#              - HEAD
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 10s
+      routes:
+#        - id: test-service-withResilient4j
+#          uri: http://localhost:8091
+#          predicates:
+#            - Path=/testService/**
+#          filters:
+#            - RewritePath=/testService/(?<path>.*), /$\{path}
+#        - id: test-service-withResilient4j-statusCode
+#          uri: http://localhost:8091
+#          predicates:
+#            - Path=/testInternalServiceError/**
+#          filters:
+#            - RewritePath=/testInternalServiceError/(?<path>.*), /$\{path}
+#        - id: springCloud-k8s-provider-app
+#          uri: lb://springCloud-k8s-provider-app
+#          #如果list类型中也可使用逗号进行分割
+#          predicates: 
+#          - Path=/provider/**
+#          filters:
+#          - StripPrefix=1
+#          - CircuitBreaker=tools
+#          - RewritePath=/provider/(?<path>.*), /$\{path}
 # 开启resilience4j熔断器
     circuitbreaker:
       resilience4j:
@@ -100,12 +147,12 @@ logging:
     
 # swagger configuration
 swagger:
-  base-package: com.springCloud.k8s
+  base-package: com.springCloud.k8s  
   
 # feign
-feign:
-  circuitbreaker:
-    enabled: true
+#feign:
+#  circuitbreaker:
+#    enabled: true
 #  client:
 #    config:
 #      default:
@@ -113,30 +160,30 @@ feign:
 #        readTimeout: 2000
 
 # feign-reactor        
-reactive:
-  feign:
-    loadbalancer:
-      enabled: true
-    circuit:
-      breaker:
-        enabled: true
-    client:
-      config:
-        default:
-          options:
-            readTimeoutMillis: 2000
-            writeTimeoutMillis: 2000
-            connectTimeoutMillis: 1000
-          retryOnSame:
-            builder: reactivefeign.retry.BasicReactiveRetryPolicy.Builder 
-            args:
-              maxRetries: 0
-              backoffInMs: 10
-          retryOnNext:
-            builder: reactivefeign.retry.BasicReactiveRetryPolicy.Builder
-            args:
-              maxRetries: 2
-              backoffInMs: 10
+#reactive:
+#  feign:
+#    loadbalancer:
+#      enabled: true
+#    circuit:
+#      breaker:
+#        enabled: true
+#    client:
+#      config:
+#        default:
+#          options:
+#            readTimeoutMillis: 2000
+#            writeTimeoutMillis: 2000
+#            connectTimeoutMillis: 1000
+#          retryOnSame:
+#            builder: reactivefeign.retry.BasicReactiveRetryPolicy.Builder 
+#            args:
+#              maxRetries: 0
+#              backoffInMs: 10
+#          retryOnNext:
+#            builder: reactivefeign.retry.BasicReactiveRetryPolicy.Builder
+#            args:
+#              maxRetries: 2
+#              backoffInMs: 10
 
 # resilience4j
 resilience4j:

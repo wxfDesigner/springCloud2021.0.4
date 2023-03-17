@@ -41,14 +41,14 @@ spring:
       discovery: 
         # 服务注册地址
         # k8s service address
-        server-addr: nacos.dubbo-demo.svc:8848
+        #server-addr: nacos.dubbo-demo.svc:8848
         # ip address
-#        server-addr: 192.168.172.113:8848
+        server-addr: localhost:8848
         # 注册命名空间
         # k8s nacos namespace
-        namespace: springCloud-k8s
+        #namespace: springCloud-k8s
         # ip nacos namespace
-#        namespace: 5d0ca120-70d9-4a61-b212-29309118619b
+        namespace: ad67d78d-1978-45c5-9c1b-1acba7229190
         username: nacos
         password: nacos
         metadata: 
@@ -58,14 +58,14 @@ spring:
       config:
         # 配置中心地址
         # k8s service address
-        server-addr: nacos.dubbo-demo.svc:8848
+        #server-addr: nacos.dubbo-demo.svc:8848
         # ip address
-#        server-addr: 192.168.172.113:8848
+        server-addr: localhost:8848
         # 服务命名空间
         # k8s nacos namespace
-        namespace: springCloud-k8s
+        #namespace: springCloud-k8s
         # ip nacos namespace
-#        namespace: 5d0ca120-70d9-4a61-b212-29309118619b
+        namespace: ad67d78d-1978-45c5-9c1b-1acba7229190
         username: nacos
         password: nacos
         # 配置文件格式

@@ -27,6 +27,8 @@ spec:
     metadata:
       labels:
         app: spring-cloud-provider
+#      annotations:
+#        "cni.projectcalico.org/ipv4pools": "[\"new-pool1\"]" # ip pools
     spec:
       terminationGracePeriodSeconds: 120
       volumes:
