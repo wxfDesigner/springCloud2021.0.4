@@ -50,7 +50,7 @@ public class Swagger3ResourceProvider implements SwaggerResourcesProvider {
 		routeLocator.getRoutes().subscribe(route -> {
 			path.delete(0, path.length());
 			path.append("/").append(route.getUri().getHost()).append(API_URI);
-			resources.add(swaggerResource(route.getUri().getHost(), path.toString(), "3.0.0"));
+			resources.add(swaggerResource(route.getUri().getHost(), path.toString(), "3.0"));
 		});
 		log.info("swagger3 api docs:{}", JSON.toJSONString(resources));
 		return resources;
