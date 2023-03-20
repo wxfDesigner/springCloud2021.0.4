@@ -31,7 +31,7 @@ public class Swagger3ResourceProvider implements SwaggerResourcesProvider {
 	/**
 	 * swagger默认的url后缀
 	 */
-	private static final String API_URI = "v3/api-docs";
+	public static final String API_URI = "/v2/api-docs";
 
 	/**
 	 * 网关路由
@@ -49,8 +49,8 @@ public class Swagger3ResourceProvider implements SwaggerResourcesProvider {
 		StringBuilder path = new StringBuilder();
 		routeLocator.getRoutes().subscribe(route -> {
 			path.delete(0, path.length());
-			path.append("/").append(route.getUri().getHost()).append("/").append(API_URI);
-			resources.add(swaggerResource(route.getUri().getHost(), path.toString(), "3.0"));
+			path.append("/").append(route.getUri().getHost()).append(API_URI);
+			resources.add(swaggerResource(route.getUri().getHost(), path.toString(), "3.0.0"));
 		});
 		log.info("swagger3 api docs:{}", JSON.toJSONString(resources));
 		return resources;

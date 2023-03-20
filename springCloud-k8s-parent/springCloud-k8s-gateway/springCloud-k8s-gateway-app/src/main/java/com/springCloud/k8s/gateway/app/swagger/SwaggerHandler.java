@@ -1,22 +1,28 @@
 package com.springCloud.k8s.gateway.app.swagger;
 
-import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
-import springfox.documentation.swagger.web.*;
-
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import lombok.AllArgsConstructor;
+import reactor.core.publisher.Mono;
+import springfox.documentation.swagger.web.SecurityConfiguration;
+import springfox.documentation.swagger.web.SecurityConfigurationBuilder;
+import springfox.documentation.swagger.web.SwaggerResource;
+import springfox.documentation.swagger.web.SwaggerResourcesProvider;
+import springfox.documentation.swagger.web.UiConfiguration;
+import springfox.documentation.swagger.web.UiConfigurationBuilder;
+
 /**
- * swagger的数据接口
- * 在访问swagger-ui中会拉去此接口的数据
- * @author whx
- * @date 2022/4/22
+ * 
+ * @ClassName: SwaggerHandler  
+ * @Description: swagger的数据接口，在访问swagger-ui中会拉去此接口的数据
+ * @author WangXf  
+ * @date 2023年3月20日 上午9:38:25  
+ *
  */
 //@RestController
 //@RequestMapping("/swagger-resources")

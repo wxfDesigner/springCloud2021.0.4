@@ -119,18 +119,11 @@
 			<groupId>com.playtika.reactivefeign</groupId>
 			<artifactId>feign-reactor-spring-configuration</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-slf4j</artifactId>
-		</dependency>
-		<!-- feign-reactor end -->
-		
-		<!-- spring begin -->
-		<!-- <dependency>
-		   <groupId>org.springframework.retry</groupId>
-		   <artifactId>spring-retry</artifactId>
 		</dependency> -->
-		<!-- spring end -->	
+		<!-- feign-reactor end -->
 		
 		<!-- skywalking begin -->
 		<dependency>
@@ -142,11 +135,6 @@
 			<artifactId>apm-toolkit-trace</artifactId>
 		</dependency>
 		<!-- skywalking end -->
-		<!-- <dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>30.1-jre</version>
-		</dependency> -->
 	</dependencies>
 	<build>
 		<finalName>${artifactId}</finalName>

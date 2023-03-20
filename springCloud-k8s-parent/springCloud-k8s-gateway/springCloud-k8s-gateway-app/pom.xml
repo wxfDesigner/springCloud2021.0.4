@@ -19,6 +19,17 @@
 	<dependency>
 		<groupId>com.tdh.gps.console</groupId>
 		<artifactId>console-common</artifactId>
+		<exclusions>
+			<exclusion>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>swagger-bootstrap-ui</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<!-- knife4j-->
+	<dependency>
+	    <groupId>com.github.xiaoymin</groupId>
+	    <artifactId>knife4j-spring-boot-starter</artifactId>
 	</dependency>
 	<!-- project end -->
 	<!-- springboot begin -->
