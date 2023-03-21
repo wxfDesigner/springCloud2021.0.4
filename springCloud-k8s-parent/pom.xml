@@ -200,6 +200,12 @@
 				<groupId>com.tdh.gps.console</groupId>
 				<artifactId>console-common</artifactId>
 				<version>${project.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.github.xiaoymin</groupId>
+						<artifactId>swagger-bootstrap-ui</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.tdh.urlInterceptor</groupId>
@@ -466,10 +472,12 @@
 			  <version>${swagger-bootstrap-ui.version}</version>
 			</dependency>
 			<dependency>
-			    <groupId>com.github.xiaoymin</groupId>
-			    <artifactId>knife4j-spring-boot-starter</artifactId>
-			    <version>${knife4j.version}</version>
-			</dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-dependencies</artifactId>
+                <version>${knife4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 			<!-- swagger end -->
 			<!-- skywalking begin -->
 			<dependency>
