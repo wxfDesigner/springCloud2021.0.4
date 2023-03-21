@@ -1,3 +1,14 @@
+/**  
+ * All rights Reserved, Designed By 15821434334@163.com
+ * @Title: SwaggerHandler.java   
+ * @Package com.springCloud.k8s.gateway.app.swagger   
+ * @Description: 自定义异常处理  
+ * @author: WangXf     
+ * @date: 2023年3月21日 下午5:08:23   //2023/03/21 17:08:23
+ * @version V1.0 
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
+ * 
+ */
 package com.springCloud.k8s.gateway.app.swagger;
 
 import java.util.List;
@@ -18,10 +29,12 @@ import springfox.documentation.swagger.web.UiConfigurationBuilder;
 
 /**
  * 
- * @ClassName: SwaggerHandler  
+ * @ClassName: SwaggerHandler   
  * @Description: swagger的数据接口，在访问swagger-ui中会拉去此接口的数据
- * @author WangXf  
- * @date 2023年3月20日 上午9:38:25  
+ * @author: WangXf 
+ * @date: 2023年3月21日 下午5:08:23 
+ *     
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
  *
  */
 //@RestController

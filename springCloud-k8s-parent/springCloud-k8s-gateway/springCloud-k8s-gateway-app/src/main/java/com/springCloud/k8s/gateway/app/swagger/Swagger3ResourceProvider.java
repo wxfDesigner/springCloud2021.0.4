@@ -1,3 +1,14 @@
+/**  
+ * All rights Reserved, Designed By 15821434334@163.com
+ * @Title: Swagger3ResourceProvider.java   
+ * @Package com.springCloud.k8s.gateway.app.swagger   
+ * @Description: 自定义异常处理  
+ * @author: WangXf     
+ * @date: 2023年3月21日 下午5:08:23   //2023/03/21 17:08:23
+ * @version V1.0 
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
+ * 
+ */
 package com.springCloud.k8s.gateway.app.swagger;
 
 import java.util.ArrayList;
@@ -16,10 +27,12 @@ import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
 /**
  * 
- * @ClassName: Swagger3ResourceProvider
+ * @ClassName: Swagger3ResourceProvider   
  * @Description: swagger Api接口文档配置类
- * @author WangXf
- * @date 2023年3月17日 下午5:21:25
+ * @author: WangXf 
+ * @date: 2023年3月21日 下午5:08:23   
+ *     
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
  *
  */
 @Slf4j

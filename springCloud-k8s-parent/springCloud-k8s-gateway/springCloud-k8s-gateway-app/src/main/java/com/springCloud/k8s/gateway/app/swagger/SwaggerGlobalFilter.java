@@ -1,3 +1,14 @@
+/**  
+ * All rights Reserved, Designed By 15821434334@163.com
+ * @Title: SwaggerGlobalFilter.java   
+ * @Package com.springCloud.k8s.gateway.app.swagger   
+ * @Description: 自定义异常处理  
+ * @author: WangXf     
+ * @date: 2023年3月21日 下午5:08:23   //2023/03/21 17:08:23
+ * @version V1.0 
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
+ * 
+ */
 package com.springCloud.k8s.gateway.app.swagger;
 
 import com.alibaba.fastjson.JSON;
@@ -25,10 +36,12 @@ import java.util.List;
 
 /**
  * 
- * @ClassName: SwaggerGlobalFilter
+ * @ClassName: SwaggerGlobalFilter   
  * @Description: swagger v3/api-docs缺失basePath 过滤器
- * @author WangXf
- * @date 2023年3月20日 下午8:34:31
+ * @author: WangXf 
+ * @date: 2023年3月21日 下午5:08:23 
+ *     
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
  *
  */
 @Slf4j

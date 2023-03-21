@@ -1,3 +1,14 @@
+/**  
+ * All rights Reserved, Designed By 15821434334@163.com
+ * @Title: Application.java   
+ * @Package com.springCloud.k8s.gateway.app   
+ * @Description: 自定义异常处理  
+ * @author: WangXf     
+ * @date: 2023年3月21日 下午5:08:23   //2023/03/21 17:08:23
+ * @version V1.0 
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
+ * 
+ */
 package com.springCloud.k8s.gateway.app;
 
 import org.springframework.boot.WebApplicationType;
@@ -14,10 +25,12 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 
- * @ClassName: Application
- * @Description: 网关应用启动器
- * @author WangXf
- * @date 2023年3月16日 上午10:32:35
+ * @ClassName: Application   
+ * @Description: 网关应用启动器 
+ * @author: WangXf 
+ * @date: 2023年3月21日 下午5:08:23  
+ *     
+ * @Copyright: 2023 15821434334@163.com Inc. All rights reserved. 
  *
  */
 @Slf4j

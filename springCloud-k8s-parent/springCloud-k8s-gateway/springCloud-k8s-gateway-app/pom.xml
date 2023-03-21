@@ -26,6 +26,10 @@
 			</exclusion>
 		</exclusions>
 	</dependency>
+	<dependency>
+		<groupId>com.springCloud.k8s</groupId>
+    	<artifactId>springCloud-k8s-common-model</artifactId>
+	</dependency>
 	<!-- knife4j-->
 	<dependency>
 	    <groupId>com.github.xiaoymin</groupId>
